@@ -1,0 +1,284 @@
+/* ---------- Body retro ---------- */
+body {
+  background: linear-gradient(135deg, #2a003f, #12002b, #000000);
+  background-attachment: fixed;
+  color: #f5f5f5;
+  font-family: 'Trebuchet MS', sans-serif;
+  min-height: 100vh;
+}
+
+
+
+/* ---------- Cards ---------- */
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5bb;   /* fondo claro */
+  color: #1a1a1a;              /* texto oscuro para contraste */
+  border: 1px solid #a64dff;   /* borde retro */
+  box-shadow: 0 0 10px rgba(166, 77, 255, 0.4);
+  border-radius: 8px;
+}
+
+
+.card-img-top {
+  height: 250px !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ---------- Grid responsivo ---------- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.col-md-4 {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* ---------- Navbar retro ---------- */
+.navbar {
+  background-color: #1a1a1ad8 !important;
+  border-bottom: 2px solid #a64dff;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: #a64dff !important;
+  font-weight: bold;
+  text-shadow: 0 0 5px #a64dff, 0 0 10px #ff66ff;
+}
+
+.navbar-nav .nav-link {
+  color: #e0e0e0 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #a64dff !important;
+  text-shadow: 0 0 5px #a64dff, 0 0 10px #ff66ff;
+}
+
+/* ---------- Footer retro ---------- */
+.footer {
+  background-color: #1a1a1ae3;
+  color: #a64dff;
+  border-top: 2px solid #a64dff;
+  text-shadow: 0 0 5px #a64dff, 0 0 10px #ff66ff;
+  margin-top: 2rem;
+}
+
+/* Caja clara SOLO para el contenido principal */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.199); /* translúcido claro */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.4);
+}
+
+/* Imagen de detalle más chica y centrada */
+.detalle-img {
+  max-width: 400px;   /* límite de ancho */
+  width: 100%;        /* escala en pantallas chicas */
+  display: block;     /* que se comporte como bloque */
+  margin: 0 auto 1.5rem auto; /* centrada */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.5);
+}
+/* Layout en dos columnas para detalle */
+.detalle-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Columna de imagen */
+.detalle-imagen {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.detalle-imagen img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.5);
+}
+
+/* Columna de info */
+.detalle-info {
+  flex: 2 1 400px;
+}
+
+/* Botones retro */
+.btn-retro {
+  background-color: #ff1ac6a8;   /* rosa neón */
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(255, 26, 198, 0.8), 0 0 20px rgba(255, 26, 198, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-retro:hover {
+  background-color: #ff66ff;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 102, 255, 1), 0 0 30px rgba(255, 26, 198, 0.9);
+}
+
+/* Logo en la navbar con glow retro */
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #a64dff, 0 0 15px #ff66ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #ff1ac6, 0 0 25px #a64dff;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff; /* círculo blanco atrás */
+  padding: 4px;
+  box-shadow: 
+    0 0 10px #ff1ac6,
+    0 0 20px #a64dff,
+    0 0 40px rgba(255, 26, 198, 0.8);
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 26, 198, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+/* Fondo base synthwave */
+body {
+  background: radial-gradient(circle at top center, #ff00cc 0%, #330066 100%);
+  color: #f5f5f5;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Rejilla inferior tipo synthwave */
+body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background-image:
+    linear-gradient(90deg, rgba(166,77,255,0.4) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(166,77,255,0.4) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(500px) rotateX(60deg);
+  box-shadow: 0 0 20px rgba(166,77,255,0.6);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stars1, .stars2, .stars3 {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Capa 1: estrellas pequeñas */
+.stars1 {
+  background-image: radial-gradient(1px 1px at 10% 20%, white 80%, transparent 20%);
+  background-size: 100px 100px;
+  animation: twinkle 3s infinite alternate;
+  animation-delay: 0s;
+}
+
+/* Capa 2: medianas */
+.stars2 {
+  background-image: radial-gradient(1.5px 1.5px at 50% 70%, white 80%, transparent 20%);
+  background-size: 150px 150px;
+  animation: twinkle 4s infinite alternate;
+  animation-delay: 1.5s;
+}
+
+/* Capa 3: grandes */
+.stars3 {
+  background-image: radial-gradient(2px 2px at 30% 40%, white 80%, transparent 20%);
+  background-size: 200px 200px;
+  animation: twinkle 5s infinite alternate;
+  animation-delay: 3s;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.2; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1.2); }
+}
+
+
+/* Asegurar que el contenido quede arriba de las estrellas y rejilla */
+.container, nav, footer {
+  position: relative;
+  z-index: 1;
+}
+/* Footer retro */
+.footer {
+  background: #1a0033; /* violeta oscuro */
+  border-top: 2px solid #a64dff;
+  color: #e0e0e0;
+  box-shadow: 0 -2px 10px rgba(166, 77, 255, 0.5);
+  text-shadow: 0 0 5px #a64dff, 0 0 10px #ff66ff;
+  position: relative;
+  z-index: 1;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+}
+
+.footer-brand {
+  color: #ff1ac6;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ff1ac6, 0 0 15px #a64dff;
+  animation: glow-footer 2s infinite alternate;
+}
+
+@keyframes glow-footer {
+  from { text-shadow: 0 0 5px #ff1ac6, 0 0 15px #a64dff; }
+  to   { text-shadow: 0 0 15px #ff66ff, 0 0 30px #ff1ac6; }
+}
