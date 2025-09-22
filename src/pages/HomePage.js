@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../api/firebaseConfig";
+import { useCarrito } from "../context/CarritoContext"; // 👈 importamos el contexto
 
 function HomePage() {
   const [productos, setProductos] = useState([]);
   const [busqueda, setBusqueda] = useState("");
   const [categoria, setCategoria] = useState("todos");
+
+  const { agregarAlCarrito } = useCarrito(); // 👈 usamos la función
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -23,7 +26,8 @@ function HomePage() {
   // 🔎 Filtrado
   const productosFiltrados = productos.filter((prod) => {
     const matchBusqueda = prod.nombre.toLowerCase().includes(busqueda.toLowerCase());
-    const matchCategoria = categoria === "todos" || prod.categoria.toLowerCase() === categoria;
+    const matchCategoria =
+      categoria === "todos" || prod.categoria.toLowerCase() === categoria;
     return matchBusqueda && matchCategoria;
   });
 
@@ -45,7 +49,9 @@ function HomePage() {
         {["todos", "consola", "vinilo", "cassette", "cartucho", "indumentaria", "deporte"].map((cat) => (
           <button
             key={cat}
-            className={`btn btn-sm me-2 ${categoria === cat ? "btn-retro" : "btn-outline-light"}`}
+            className={`btn btn-sm me-2 ${
+              categoria === cat ? "btn-retro" : "btn-outline-light"
+            }`}
             onClick={() => setCategoria(cat)}
           >
             {cat.charAt(0).toUpperCase() + cat.slice(1)}
@@ -59,7 +65,7 @@ function HomePage() {
           <div className="col-md-4 mb-3" key={prod.id}>
             <div className="card h-100 shadow-sm">
               <img src={prod.imagen} className="card-img-top" alt={prod.nombre} />
-              <div className="card-body">
+              <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{prod.nombre}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">
                   Categoría: {prod.categoria}
@@ -67,9 +73,20 @@ function HomePage() {
                 <h6 className="card-subtitle mb-2 text-success">
                   ${prod.valor}
                 </h6>
-                <Link to={`/detalle/${prod.id}`} className="btn btn-retro">
-                  Ver Detalle
-                </Link>
+
+                {/* Botones */}
+                <div className="mt-auto d-flex justify-content-between">
+                  <Link to={`/detalle/${prod.id}`} className="btn btn-retro">
+                    Ver Detalle
+                  </Link>
+                  <button
+                    className="btn btn-success"
+                    onClick={() => agregarAlCarrito(prod)}
+                  >
+                    🛒 Agregar
+                  </button>
+                </div>
+
               </div>
             </div>
           </div>

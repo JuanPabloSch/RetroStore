@@ -319,3 +319,13 @@ body::before {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(166,77,255,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   filter: drop-shadow(0 0 5px #a64dff) drop-shadow(0 0 10px #ff66ff);
 }
+
+.bg-retro {
+  background: #a64dff;   /* violeta neón */
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 0 5px #a64dff, 0 0 10px #ff66ff;
+}
