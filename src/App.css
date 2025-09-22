@@ -282,3 +282,40 @@ body::before {
   from { text-shadow: 0 0 5px #ff1ac6, 0 0 15px #a64dff; }
   to   { text-shadow: 0 0 15px #ff66ff, 0 0 30px #ff1ac6; }
 }
+
+/* Logo siempre cuadrado (sin deformarse) */
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;    /* evita ovalar */
+  border-radius: 50%;
+  background: #fff;     /* halo claro para contrastar */
+  padding: 3px;
+  box-shadow: 0 0 8px #a64dff, 0 0 15px #ff66ff;
+}
+
+/* Asegura que el ícono hamburguesa se vea en navbar-dark */
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255,255,255,0.4);
+}
+.navbar-dark .navbar-toggler-icon {
+  /* glow leve para que destaque */
+  filter: drop-shadow(0 0 3px #a64dff);
+}
+/* Botón hamburguesa con borde neón */
+.navbar-dark .navbar-toggler {
+  border-color: #a64dff; /* violeta */
+  box-shadow: 0 0 5px #a64dff, 0 0 10px #ff66ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-toggler:hover {
+  border-color: #ff66ff;
+  box-shadow: 0 0 10px #ff66ff, 0 0 20px #a64dff;
+}
+
+/* Icono hamburguesa en violeta neón */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(166,77,255,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  filter: drop-shadow(0 0 5px #a64dff) drop-shadow(0 0 10px #ff66ff);
+}
