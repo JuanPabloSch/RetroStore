@@ -1,28 +1,31 @@
 # RetroStore 🎮💿
 
-SPA desarrollada en **React** que simula una tienda retro.  
-Permite listar, buscar, filtrar y crear productos en Firebase Firestore.  
-Deploy en Vercel: [link al deploy]
+Aplicación web SPA hecha con **React** y **Firebase Firestore** para gestionar productos retro (consolas, vinilos, cassettes, indumentaria y más).  
+Incluye operaciones CRUD, filtros por categoría, buscador y carrito de compras básico.
 
 ---
 
-## 🚀 Tecnologías
+## 🚀 Deploy
+Podés probar la aplicación en el siguiente enlace:  
+👉 [RetroStore en Vercel](https://retro-store-one.vercel.app/)
+
+---
+
+## ⚙️ Tecnologías usadas
 - React (Create React App)
 - React Router DOM
 - React Hook Form
 - Firebase Firestore
-- Bootstrap + CSS personalizado (tema retro neón)
+- Bootstrap + CSS custom (estilo retro synthwave)
 
-## 📑 Funcionalidades
-- Listado de productos con filtros por categoría y buscador.
-- Vista de detalle con información completa de cada ítem.
-- Formulario para agregar productos con validaciones.
-- Animaciones retro y fondo estilo synthwave.
-- Deploy en Vercel (link aquí cuando esté publicado).
+---
 
-## ⚙️ Cómo correrlo en local
+## 📂 Instalación y ejecución local
+Clonar el repo:
+
 ```bash
-git clone https://github.com/TuUsuario/retrostore.git
-cd retrostore
+git clone https://github.com/JuanPabloSch/RetroStore.git
+cd RetroStore
 npm install
 npm start
+
